@@ -1,0 +1,38 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <div>
+    <md-toolbar color="primary">
+      <a><span>Eventime</span></a>
+
+      <button md-icon-button [md-menu-trigger-for]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+    </md-toolbar>
+    <md-menu x-position="before" #menu="mdMenu">
+      <button md-menu-item>Home</button>
+      <button md-menu-item>Sign in</button>
+      <button md-menu-item>Sign up</button>
+      <button md-menu-item>Profile</button>
+      <button md-menu-item>notification</button>
+      <button md-menu-item>sign out</button>
+    </md-menu>
+  </div>
+
+  <div id="layoutContainer" ng-controller="layoutController as ctrl" style="height:100px;" ng-cloak>
+    <div layout="row" layout-xs="column">
+      <div flex class="green box">Row 1: Item 1</div>
+      <div flex="20" class="blue box">Row 1: Item 2</div>
+    </div>
+
+    <div layout="column" layout-xs="column">
+      <div flex="33" class="green box">Column 1: item 1</div>
+      <div flex="66" class="blue box">Column 1: item 2</div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <p>
+    main-layout works!
+  </p>
+</div>
