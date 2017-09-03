@@ -1,3 +1,11 @@
-<p>
-  search-form works!
-</p>
+<md-form-field>
+   <input type="text" mdInput [formControl]="myControl" [mdAutocomplete]="auto">
+</md-form-field>
+
+<md-autocomplete #auto="mdAutocomplete">
+   <md-option *ngFor="let option of options" [value]="option">
+      {{ option }}
+   </md-option>
+</md-autocomplete>
+
+
