@@ -1,3 +1,17 @@
-<p>
-  add-event works!
-</p>
+<div>
+  <h3>Add new Event</h3>
+  <form>
+    <md-form-field class="example-full-width">
+      <input mdInput placeholder="Event name">
+    </md-form-field>
+    <input [mdDatepicker]="myDatepicker">
+    <md-datepicker-toggle [for]="myDatepicker"></md-datepicker-toggle>
+    <md-datepicker #myDatepicker></md-datepicker>
+    <input [mdDatepicker]="myDatepicker">
+    <md-datepicker-toggle [for]="myDatepicker"></md-datepicker-toggle>
+    <md-datepicker #myDatepicker></md-datepicker>
+    <md-form-field class="example-full-width">
+        <input mdInput placeholder="Description">
+      </md-form-field>
+  </form>
+</div>
