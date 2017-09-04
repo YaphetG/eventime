@@ -1,11 +1,12 @@
 <md-form-field>
-   <input type="text" mdInput [formControl]="myControl" [mdAutocomplete]="auto">
+   <input type="text" mdInput  value="{{query}}" (keyup.enter)="search()">   
 </md-form-field>
+<button md-button (click)="search()" ><i class="material-icons">search</i></button>
 
-<md-autocomplete #auto="mdAutocomplete">
-   <md-option *ngFor="let option of options" [value]="option">
-      {{ option }}
-   </md-option>
-</md-autocomplete>
+
+
+
+
+
 
 
