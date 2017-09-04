@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
@@ -20,6 +22,8 @@ import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { PreviousEventsComponent } from './components/previous-events/previous-events.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
+import { CommentService} from "./services/comment.service";
+
 
 @NgModule({
   declarations: [
@@ -41,9 +45,11 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
     MainLayoutComponent
   ],
   imports: [
-    BrowserModule, BrowserAnimationsModule, MaterialModule
+    BrowserModule, BrowserAnimationsModule, MaterialModule, FormsModule
   ],
-  providers: [],
+  providers: [
+    CommentService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

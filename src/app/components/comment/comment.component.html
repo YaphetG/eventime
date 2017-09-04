@@ -1,3 +1,7 @@
-<p>
-  comment works!
-</p>
+<md-form-field>
+   <input type="text" mdInput  [(ngModel)]="comment.description" (keyup.enter)="sendComment()">   
+</md-form-field>
+<button md-button (click)="sendComment()" ><i class="material-icons">comment</i></button>
+
+
+
