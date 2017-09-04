@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from '@angular/material';
+import { MaterialModule, MdDatepickerModule, MdNativeDateModule} from '@angular/material';
+import { FormsModule } from '@angular/forms';
+import {GooglePlaceModule} from "angular2-google-place"
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
@@ -41,7 +43,14 @@ import { MainLayoutComponent } from './Components/main-layout/main-layout.compon
     MainLayoutComponent
   ],
   imports: [
-    BrowserModule, BrowserAnimationsModule, MaterialModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    MdDatepickerModule,
+    FormsModule,
+    MdNativeDateModule,
+    GooglePlaceModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

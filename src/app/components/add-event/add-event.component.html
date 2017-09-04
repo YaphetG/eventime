@@ -1,17 +1,62 @@
 <div>
-  <h3>Add new Event</h3>
-  <form>
-    <md-form-field class="example-full-width">
-      <input mdInput placeholder="Event name">
-    </md-form-field>
-    <input [mdDatepicker]="myDatepicker">
-    <md-datepicker-toggle [for]="myDatepicker"></md-datepicker-toggle>
-    <md-datepicker #myDatepicker></md-datepicker>
-    <input [mdDatepicker]="myDatepicker">
-    <md-datepicker-toggle [for]="myDatepicker"></md-datepicker-toggle>
-    <md-datepicker #myDatepicker></md-datepicker>
-    <md-form-field class="example-full-width">
-        <input mdInput placeholder="Description">
-      </md-form-field>
+  <form class="example-form">
+    <fieldset>
+      <md-input-container class="example-full-width">
+        <input mdInput placeholder="Event name">
+      </md-input-container>
+
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <md-form-field>
+              <input mdInput [mdDatepicker]="picker" placeholder="Start Date" >
+              <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+              <md-datepicker #picker></md-datepicker>
+            </md-form-field>
+          </td>
+          <td>
+            <md-input-container class="example-full-width">
+              <input mdInput placeholder="Start Time" type="time">
+            </md-input-container>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <md-form-field>
+              <input mdInput [mdDatepicker]="Endpicker" placeholder="End Date" >
+              <md-datepicker-toggle mdSuffix [for]="Endpicker"></md-datepicker-toggle>
+              <md-datepicker #Endpicker></md-datepicker>
+            </md-form-field>
+          </td>
+          <td>
+            <md-input-container class="example-full-width">
+              <input mdInput placeholder="End Time" type="time">
+            </md-input-container>
+          </td>
+        </tr>
+      </table>
+      <p>
+        <md-input-container class="example-full-width">
+          <input mdInput placeholder="Location" [(ngModel)]="address" (setAddress)="getAddress($event)" googleplace>
+        </md-input-container>
+      </p>
+      <p>
+        <md-select placeholder="Catagory">
+          <md-option>None</md-option>
+          <md-option *ngFor="let cat of catagory" [value]="cat.value">
+            {{cat.viewValue}}
+          </md-option>
+        </md-select>
+      </p>
+      <p>
+        <md-form-field class="example-full-width">
+          <textarea mdInput placeholder="Description"></textarea>
+        </md-form-field>
+      </p>
+      <div class="button-row">
+        <a md-button routerLink="." color="primary">Create</a>
+        <a md-button routerLink="." color="warn">Cancle</a>
+      </div>
+    </fieldset>
   </form>
 </div>

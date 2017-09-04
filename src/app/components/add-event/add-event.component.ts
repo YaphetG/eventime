@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddEventComponent implements OnInit {
 
+  selectedValue: string;
+
+  catagory = [
+    { value: 'sport-0', viewValue: 'Sport' },
+    { value: 'music-1', viewValue: 'Music' },
+    { value: 'birthday-2', viewValue: 'Birthday' }
+  ];
+
   constructor() { }
 
   ngOnInit() {
