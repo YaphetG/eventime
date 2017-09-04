@@ -1,3 +1,12 @@
-<p>
-  search-form works!
-</p>
+<md-form-field>
+   <input type="text" mdInput  value="{{query}}" (keyup.enter)="search()">   
+</md-form-field>
+<button md-button (click)="search()" ><i class="material-icons">search</i></button>
+
+
+
+
+
+
+
+
